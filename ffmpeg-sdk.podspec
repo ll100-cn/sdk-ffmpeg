@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'ffmpeg-sdk'
-  spec.version      = '3.2'
+  spec.version      = '20170405'
 
   spec.homepage     = 'https://github.com/ll100-cn/ffmpeg-sdk'
   spec.authors      = { 'll100' => 'develop@ll100.com' }
