@@ -1,0 +1,11 @@
+--- build-fdk-aac.sh	2017-04-05 14:58:21.000000000 +0800
++++ build-fdk-aac.sh.orig	2017-04-05 14:59:06.000000000 +0800
+@@ -62,7 +62,7 @@
+                     else
+ 		        HOST="--host=arm-apple-darwin"
+ 	            fi
+-		    CFLAGS="$CFLAGS -fembed-bitcode"
++		    CFLAGS="$CFLAGS -fembed-bitcode -mios-version-min=7.0"
+ 		fi
+ 
+ 		XCRUN_SDK=`echo $PLATFORM | tr '[:upper:]' '[:lower:]'`

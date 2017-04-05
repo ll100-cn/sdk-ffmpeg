@@ -7,6 +7,7 @@ function build_fdk_aac {
   tar xvf fdk-aac-0.1.5.tar.gz
 
   curl -OL https://github.com/kewlbear/fdk-aac-build-script-for-iOS/raw/master/build-fdk-aac.sh
+  patch < build-fdk-aac.patch
   chmod +x build-fdk-aac.sh
   ./build-fdk-aac.sh
 }
