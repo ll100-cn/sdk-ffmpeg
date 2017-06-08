@@ -23,6 +23,7 @@ function cleanup_ffmpeg {
 function build_ffmpeg {
   curl -OL https://github.com/kewlbear/FFmpeg-iOS-build-script/raw/master/build-ffmpeg.sh
   chmod +x build-ffmpeg.sh
+  patch < build-ffmpeg.patch
   FDK_AAC="$(realpath fdk-aac-ios)" ./build-ffmpeg.sh
 }
 
