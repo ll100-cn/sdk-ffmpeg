@@ -1,8 +1,17 @@
---- build-ffmpeg.sh.orig	2017-06-08 15:21:15.000000000 +0800
-+++ build-ffmpeg.sh	2017-06-08 15:21:19.000000000 +0800
+--- build-ffmpeg.sh.orig	2023-12-29 11:02:37
++++ build-ffmpeg.sh	2023-12-29 11:05:07
 @@ -1,4 +1,5 @@
  #!/bin/sh
 +set -x
- 
+
  # directories
- SOURCE="ffmpeg-3.3"
+ FF_VERSION="4.3.1"
+@@ -83,7 +84,7 @@
+ 	if [ ! -r $SOURCE ]
+ 	then
+ 		echo 'FFmpeg source not found. Trying to download...'
+-		curl http://www.ffmpeg.org/releases/$SOURCE.tar.bz2 | tar xj \
++		curl https://www.ffmpeg.org/releases/$SOURCE.tar.bz2 | tar xj \
+ 			|| exit 1
+ 	fi
+
